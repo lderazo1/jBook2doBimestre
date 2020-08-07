@@ -1,15 +1,3 @@
-# Documentation requirements
-folium
-numpy
+jupyter-book
 matplotlib
-ipywidgets
-pandas
-nbclient
-sympy
-plotly
-bokeh
-altair
-sphinx-click
-sphinx_tabs
-sphinx-panels
-jupytext[myst]
+numpy

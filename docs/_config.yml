@@ -1,46 +1,43 @@
-#######################################################################################
 # Book settings
-title: ""
-logo: images/logo.png
-author: The Jupyter Book Community
-email: choldgraf@berkeley.edu
-description: >- # this means to ignore newlines until "baseurl:"
-  This is an example book built with Jupyter Books.
-
+title                       : Universidad Técnica Particular de Loja.
+author                      : David Burneo, Carlos Castillo, Luis Daniel Erazo
+copyright                   : "2020"  # Copyright year to be placed in the footer
+logo                        : content/images/logo.png
+exclude_patterns            : []
+#######################################################################################
+# Execution settings
 execute:
-  execute_notebooks: cache
-
+  execute_notebooks         : auto 
+  cache                     : ""
+  exclude_patterns          : []
+#######################################################################################
+# HTML-specific settings
 html:
-  favicon: images/favicon.ico
-  google_analytics_id: UA-52617120-7
-  home_page_in_navbar: false
-  use_edit_page_button: true
-  use_repository_button: true
-  use_issues_button: true
-  baseurl: https://jupyterbook.org/
+  favicon                   : ""
+  use_edit_page_button      : false
+  use_repository_button     : true 
+  use_issues_button         : false
+  extra_navbar              : Basado en uso de <a href="https://jupyterbook.org">Jupyter Book</a>.
+  extra_footer              : ""  # Will be displayed underneath the footer.
+  google_analytics_id       : ""  # A GA id that can be used to track book views.
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : /  
+  url                       : https://github.com/lderazo1/jBook2doBimestre
+
+#######################################################################################
+# Launch button settings
+launch_buttons:
+  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
 
 repository:
-  url: https://github.com/executablebooks/jupyter-book
-  branch: master
-  path_to_book: docs
-
-launch_buttons:
-  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url: "https://mybinder.org"
-  colab_url: "https://colab.research.google.com"
-  thebe: true
-
+  url                       : https://github.com/lderazo1/jBook2doBimestre
+  path_to_book              : ""
+  branch                    : master
+#######################################################################################
+# Advanced and power-user settings
 sphinx:
-  config:
-    mathjax_config:
-      TeX:
-        Macros:
-          "N": "\\mathbb{N}"
-          "floor": ["\\lfloor#1\\rfloor", 1]
-          "bmat": ["\\left[\\begin{array}"]
-          "emat": ["\\end{array}\\right]"]
-    panels_add_boostrap_css: False
-  extra_extensions:
-    - sphinx_click.ext
-    - sphinx_tabs.tabs
-    - sphinx_panels
+  extra_extensions          :   # A list of extra extensions to load by Sphinx.
+  config                    :   # key-value pairs to directly over-ride the Sphinx configuration
